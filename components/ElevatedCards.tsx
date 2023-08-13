@@ -2,28 +2,24 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 export default function ElevatedCards() {
+  const elevatedCardList = [
+    {id: '1', text: 'Tap 1'},
+    {id: '2', text: 'Tap 2'},
+    {id: '3', text: 'Tap 3'},
+    {id: '4', text: 'Tap 4'},
+    {id: '5', text: 'Tap 5'},
+    {id: '6', text: 'Tap 6'},
+  ];
+
   return (
     <View>
       <Text style={styles.headingText}>Elevated Cards</Text>
       <ScrollView horizontal={true} style={styles.container}>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap 1</Text>
-        </View>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap 2</Text>
-        </View>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap 3</Text>
-        </View>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap 4</Text>
-        </View>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap 5</Text>
-        </View>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap 6</Text>
-        </View>
+        {elevatedCardList.map(item => (
+          <View key={item.id} style={[styles.card, styles.cardElevated]}>
+            <Text>{item.text}</Text>
+          </View>
+        ))}
       </ScrollView>
     </View>
   );
