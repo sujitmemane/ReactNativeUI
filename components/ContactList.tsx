@@ -34,7 +34,7 @@ export default function ContactList() {
   ];
   return (
     <View>
-      <Text style={styles.headingText}>ContactList</Text>
+      <Text style={styles.headingText}>Contact List</Text>
       <ScrollView scrollEnabled={false} style={styles.container}>
         {contacts.map(contact => (
           <View id={contact.id} style={styles.contactContainer}>
